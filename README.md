@@ -14,7 +14,7 @@ Client terminal requirement :
     - NodeJS >= 18.x.x
     - Npm
     - PHP8.x
-    - in case of using TMUX run the following command on the host : export TERM=screen-256color (optional)
+    - in case of using TMUX run the following command on the host : export TERM=screen-256color to avoid a wrong colorscheme (optional)
   
 Installation : 
   1) Copy nvim folder in ~/.config/
