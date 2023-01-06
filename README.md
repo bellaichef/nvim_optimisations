@@ -29,7 +29,7 @@ you should get something like this :
 Done !!
 
 Things you have to know (tips): 
-  - LSP phpactor need to find .git (file or folder) in the filet's folder your are editing or in one of its parents directory.
+  - LSP phpactor need to find .git (file or folder) in the file's folder your are editing or in one of its parents directory.
   - If you want to use this configuration with sudo, ensure that default editor for sudo is nvim and then use "sudo -e" or "sudoedit" command to edit your files.
 
 Below find the list of installed packages: 
