@@ -14,6 +14,7 @@ Client terminal requirement :
     - NodeJS >= 18.x.x
     - Npm
     - PHP8.x
+    - Composer ( installation : https://getcomposer.org/download/)
     - in case of using TMUX run the following command on the host : export TERM=screen-256color to avoid a wrong colorscheme (optional)
   
 Installation : 
