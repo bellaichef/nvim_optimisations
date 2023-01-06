@@ -1,4 +1,4 @@
-# nvim_optimisations
+# nvim_optimizations
 
 Optimized for Debian / Ubuntu (based on work of Chris Power : https://www.youtube.com/playlist?list=PLsz00TDipIffxsNXSkskknolKShdbcALR)
 
