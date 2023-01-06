@@ -1,6 +1,6 @@
 # nvim_optimisations
 
-Optimized for Debian / Ubuntu
+Optimized for Debian / Ubuntu (based on work of Chris Power : https://www.youtube.com/playlist?list=PLsz00TDipIffxsNXSkskknolKShdbcALR)
 
 Client terminal requirement : 
   - use of nerdfonts (optional but prettier)
@@ -14,10 +14,9 @@ Client terminal requirement :
     - in case of using TMUX run the following command on the host : export TERM=screen-256color (optional)
   
 Installation : 
-
-1 - Copy nvim folder in ~/.config
-2 - run nvim and let packages install (You'll get some errors, it's normal, some plugins are called but not yet installed)
-3 - close and re-open nvim, everything should be ok
+  - 1) Copy nvim folder in ~/.config/
+  - 2) run nvim and let packages install (You'll get some errors, it's normal, some plugins are called but not yet installed)
+  - 3) close and re-open nvim, everything should be ok
 
 you should get something like this : 
 
@@ -41,3 +40,6 @@ At the end you should get the following packages installed :
 - nvim-telescope/telescope (https://github.com/nvim-telescope/telescope.nvim)
 - nvim-lua/plenary (https://github.com/nvim-lua/plenary.nvim)
 
+I advise you to check the 3 videos of Chris Power that'll show you how these modifications enhance your nvim. (Start of readme)
+
+Bye !
