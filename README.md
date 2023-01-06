@@ -2,8 +2,11 @@
 
 Optimized for Debian / Ubuntu (based on work of Chris Power : https://www.youtube.com/playlist?list=PLsz00TDipIffxsNXSkskknolKShdbcALR)
 
+Description : 
+These optimizations, will ad features like autocompletion for BASH, PHP, JS and LUA files (more can be added), tree explorations, filesearch, occurence search over mutiple files etc. 
+
 Client terminal requirement : 
-  - use of nerdfonts (optional but prettier)
+  - use of nerdfonts (optional but prettier : https://www.nerdfonts.com/font-downloads)
   
   Host requirement : 
   - Packages : 
@@ -14,16 +17,18 @@ Client terminal requirement :
     - in case of using TMUX run the following command on the host : export TERM=screen-256color (optional)
   
 Installation : 
-  - 1) Copy nvim folder in ~/.config/
-  - 2) run nvim and let packages install (You'll get some errors, it's normal, some plugins are called but not yet installed)
-  - 3) close and re-open nvim, everything should be ok
-
+  1) Copy nvim folder in ~/.config/
+  2) Run nvim and let packages install (You'll get some errors, it's normal, some plugins are called but not yet installed)
+  3) Close and re-open nvim, everything should be ok
+  4) In vim type ":MasonInstall bash-language-server intelephense php-cs-fixer phpactor phpcs typescript-language-server"
+  5) Close and re-open nvim
 you should get something like this : 
 
+![Screenshot from 2023-01-06 10-19-21](https://user-images.githubusercontent.com/45790724/210970680-3e50afde-2a43-4bf4-ad54-22355fb543b4.png)
 
-![Screenshot from 2023-01-06 09-33-32](https://user-images.githubusercontent.com/45790724/210962811-554c3f1f-a23d-4dff-b72b-4969ec5a6511.png)
+Done !!
 
-At the end you should get the following packages installed : 
+Below find the list of installed packages: 
 
 - wbthomason/packer (https://github.com/wbthomason/packer.nvim)
 - ellisonleao/gruvbox (https://github.com/morhetz/gruvbox)
