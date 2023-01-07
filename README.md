@@ -22,10 +22,10 @@ Client terminal requirement :
   
 Installation : 
 
-  Semi-Auto : Download install.sh in your home directory, and run the following command : 'chmod +x install.sh && ./install.sh'
+  - Semi-Auto : Download install.sh in your home directory, and run the following command : 'chmod +x install.sh && ./install.sh'
   It's really not perfecr but it save a little bit of time
   
-  Manual installation :
+  - Manual installation :
 
   1) Check that you meet all requirements
   2) Copy nvim folder in ~/.config/
