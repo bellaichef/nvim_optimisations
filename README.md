@@ -6,7 +6,7 @@ Description :
 These optimizations, will ad features like autocompletion for BASH, PHP, JS and LUA files (more can be added), tree explorations, filesearch, occurence search over mutiple files etc. 
 In the original configuration phpactor is used for PHP completion. I disabled it and enable intelephense instead which I feels more efficient. (May be because I don't know enough the product)
 
-I also keep.
+I also kept the key bindings from Ganivok/Kickstart.nvim (https://github.com/Gavinok/Kickstart.nvim) 
 
 Client terminal requirement : 
   - use of nerdfonts (optional but prettier : https://www.nerdfonts.com/font-downloads)
@@ -23,11 +23,12 @@ Client terminal requirement :
   - in case of using TMUX run the following command on the host : export TERM=screen-256color to avoid a wrong colorscheme (optional)
   
 Installation : 
-  1) Copy nvim folder in ~/.config/
-  2) Run nvim and let packages install (You'll get some errors, it's normal, some plugins are called but not yet installed)
-  3) Close and re-open nvim, everything should be ok
-  4) In vim type ":MasonInstall bash-language-server intelephense php-cs-fixer phpactor phpcs typescript-language-server"
-  5) Close and re-open nvim
+  1) Check that you meet all requirements
+  2) Copy nvim folder in ~/.config/
+  3) Run nvim and let packages install (You'll get some errors, it's normal, some plugins are called but not yet installed)
+  4) Close and re-open nvim, everything should be ok
+  5) In vim type ":MasonInstall bash-language-server intelephense php-cs-fixer phpactor phpcs typescript-language-server"
+  6) Close and re-open nvim
 you should get something like this : 
 
 ![Screenshot from 2023-01-06 10-19-21](https://user-images.githubusercontent.com/45790724/210970680-3e50afde-2a43-4bf4-ad54-22355fb543b4.png)
@@ -54,6 +55,7 @@ Below find the list of installed packages:
 - neovim/nvim-lspconfig (https://github.com/neovim/nvim-lspconfig)
 - nvim-telescope/telescope (https://github.com/nvim-telescope/telescope.nvim)
 - nvim-lua/plenary (https://github.com/nvim-lua/plenary.nvim)
+- nvim-ripgrep (https://github.com/rinx/nvim-ripgrep)
 
 I advise you to check the 3 videos of Chris Power that'll show you how these modifications enhance your nvim. (Start of readme)
 
