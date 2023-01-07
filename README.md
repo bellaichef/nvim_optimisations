@@ -9,7 +9,8 @@ Client terminal requirement :
   - use of nerdfonts (optional but prettier : https://www.nerdfonts.com/font-downloads)
   
   Host requirement : 
-  - Packages : 
+  - Packages :
+    - ripgrep
     - Nvim >= 0.8
     - NodeJS >= 18.x.x
     - Npm
