@@ -24,7 +24,8 @@ Installation :
 
   - Semi-Auto : Download install.sh in your home directory, and run the following command : 'chmod +x install.sh && ./install.sh'
   
-  It's really not perfect but it save a little bit of time
+  It's really not perfect but it save a little bit of time. Nvim will launch by itself, first time you'll get some errors, it's normal because it tries to run plugins not yet install. Type enter and you'll see the plugins install. Close and relaunch nvim and you'll see treesitter finishing the installation.
+  Finally follow step 5 of manual installation and your are done.
   
   - Manual installation :
 
