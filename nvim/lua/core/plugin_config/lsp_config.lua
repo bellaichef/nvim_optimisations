@@ -21,13 +21,14 @@ require('lspconfig').sumneko_lua.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
+
 --[[
--- Disable in favor of Intelephense 
-require('lspconfig').phpactor.setup {
+--require('lspconfig').phpactor.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
 ]]
+
 require('lspconfig').intelephense.setup {
   on_attach = on_attach,
   capabilities = capabilities,

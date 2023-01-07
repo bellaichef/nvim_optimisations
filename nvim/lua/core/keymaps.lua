@@ -15,7 +15,5 @@ vim.opt.shiftround = true
 vim.opt.expandtab = true
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
-
--- Disable and Enable mouse in Vim
 vim.keymap.set('n', '<leader>dm', ':set mouse=<CR>')
 vim.keymap.set('n', '<leader>em', ':set mouse=a<CR>')
