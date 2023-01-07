@@ -23,7 +23,8 @@ Client terminal requirement :
 Installation : 
 
   - Semi-Auto : Download install.sh in your home directory, and run the following command : 'chmod +x install.sh && ./install.sh'
-  It's really not perfecr but it save a little bit of time
+  
+  It's really not perfect but it save a little bit of time
   
   - Manual installation :
 
