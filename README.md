@@ -19,10 +19,14 @@ Client terminal requirement :
     - Npm
     - PHP8.x
     - Composer ( installation : https://getcomposer.org/download/)
-
-  - in case of using TMUX run the following command on the host : export TERM=screen-256color to avoid a wrong colorscheme (optional)
   
 Installation : 
+
+  Semi-Auto : Download install.sh in your home directory, and run the following command : 'chmod +x install.sh && ./install.sh'
+  It's really not perfecr but it save a little bit of time
+  
+  Manual installation :
+
   1) Check that you meet all requirements
   2) Copy nvim folder in ~/.config/
   3) Run nvim and let packages install (You'll get some errors, it's normal, some plugins are called but not yet installed)
@@ -36,8 +40,10 @@ you should get something like this :
 Done !!
 
 Things you have to know (tips): 
-  - LSP phpactor need to find .git (file or folder) in the file's folder your are editing or in one of its parents directory.
-  - If you want to use this configuration with sudo, ensure that default editor for sudo is nvim and then use "sudo -e" or "sudoedit" command to edit your files.
+  - PHP LSPs need to find .git (file or folder) in the file's folder your are editing or in one of its parents directory. For now I don't know how to avoid this behaviour. So I put a .git file in /var/tmp/ and I use 'sudoedit' or 'sudo -e' to edit my files.
+  - If you want to set nvim as default system editor run this command : 'sudo update-alternatives --config editor', and choose nvim.
+  - If you want to use this configuration with sudo, ensure that default editor for sudo is nvim and then use 'sudo -e' or 'sudoedit' command to edit your files.
+  - in case of using TMUX run the following command on the host : export TERM=screen-256color to avoid a wrong colorscheme (optional)
 
 Below find the list of installed packages: 
 
