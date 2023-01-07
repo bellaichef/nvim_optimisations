@@ -4,6 +4,9 @@ Optimized for Debian / Ubuntu (based on work of Chris Power : https://www.youtub
 
 Description : 
 These optimizations, will ad features like autocompletion for BASH, PHP, JS and LUA files (more can be added), tree explorations, filesearch, occurence search over mutiple files etc. 
+In the original configuration phpactor is used for PHP completion. I disabled it and enable intelephense instead which I feels more efficient. (May be because I don't know enough the product)
+
+I also keep.
 
 Client terminal requirement : 
   - use of nerdfonts (optional but prettier : https://www.nerdfonts.com/font-downloads)
@@ -16,7 +19,8 @@ Client terminal requirement :
     - Npm
     - PHP8.x
     - Composer ( installation : https://getcomposer.org/download/)
-    - in case of using TMUX run the following command on the host : export TERM=screen-256color to avoid a wrong colorscheme (optional)
+
+  - in case of using TMUX run the following command on the host : export TERM=screen-256color to avoid a wrong colorscheme (optional)
   
 Installation : 
   1) Copy nvim folder in ~/.config/
