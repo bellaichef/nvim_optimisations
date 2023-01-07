@@ -8,10 +8,10 @@ In the original configuration phpactor is used for PHP completion. I disabled it
 
 I also kept the key bindings from Ganivok/Kickstart.nvim (https://github.com/Gavinok/Kickstart.nvim) 
 
-Client terminal requirement : 
+## Client terminal requirement : 
   - use of nerdfonts (optional but prettier : https://www.nerdfonts.com/font-downloads)
   
-  Host requirement : 
+## Host requirement : 
   - Packages :
     - ripgrep
     - Nvim >= 0.8
@@ -20,14 +20,14 @@ Client terminal requirement :
     - PHP8.x
     - Composer ( installation : https://getcomposer.org/download/)
   
-Installation : 
+## Installation : 
 
-  - Semi-Auto : Download install.sh in your home directory, and run the following command : 'chmod +x install.sh && ./install.sh'
+ #### - Semi-Auto :
+   - Download install.sh in your home directory, and run the following command : 'chmod +x install.sh && ./install.sh'
+   - It's really not perfect but it save a little bit of time. Nvim will launch by itself, first time you'll get some errors, it's normal because it tries to run plugins not yet install. Type enter and you'll see the plugins install. Close and relaunch nvim and you'll see treesitter finishing the installation.
+   - Finally follow step 5 of manual installation and your are done.
   
-  It's really not perfect but it save a little bit of time. Nvim will launch by itself, first time you'll get some errors, it's normal because it tries to run plugins not yet install. Type enter and you'll see the plugins install. Close and relaunch nvim and you'll see treesitter finishing the installation.
-  Finally follow step 5 of manual installation and your are done.
-  
-  - Manual installation :
+ #### - Manual installation :
 
   1) Check that you meet all requirements
   2) Copy nvim folder in ~/.config/
@@ -41,13 +41,13 @@ you should get something like this :
 
 Done !!
 
-Things you have to know (tips): 
+## Things you have to know (tips): 
   - PHP LSPs need to find .git (file or folder) in the file's folder your are editing or in one of its parents directory. For now I don't know how to avoid this behaviour. So I put a .git file in /var/tmp/ and I use 'sudoedit' or 'sudo -e' to edit my files.
   - If you want to set nvim as default system editor run this command : 'sudo update-alternatives --config editor', and choose nvim.
   - If you want to use this configuration with sudo, ensure that default editor for sudo is nvim and then use 'sudo -e' or 'sudoedit' command to edit your files.
   - in case of using TMUX run the following command on the host : export TERM=screen-256color to avoid a wrong colorscheme (optional)
 
-Below find the list of installed packages: 
+## Below find the list of installed packages: 
 
 - wbthomason/packer (https://github.com/wbthomason/packer.nvim)
 - ellisonleao/gruvbox (https://github.com/morhetz/gruvbox)
