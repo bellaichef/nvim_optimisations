@@ -23,19 +23,18 @@ I also kept the key bindings from Ganivok/Kickstart.nvim (https://github.com/Gav
 ## Installation : 
 
  #### - Semi-Auto :
-   - Download install.sh in your home directory, and run the following command : 'chmod +x install.sh && ./install.sh'
-   - It's really not perfect but it save a little bit of time. Nvim will launch by itself, first time you'll get some errors, it's normal because it tries to run plugins not yet install. Type enter and you'll see the plugins install. Close and relaunch nvim and you'll see treesitter finishing the installation.
-   - Finally follow step 5 of manual installation and your are done.
+   - Download install.sh into your home directory, and run the following command : 'chmod +x install.sh && ./install.sh'
+   - It's really not perfect but it save a little bit of time. Nvim will launch by itself, first time it'll installed required nvim plugins. Type [ENTER] and you'll see the plugins install.  Close nvim and then you'll see treesitter and Mason LSPs installation.
   
  #### - Manual installation :
 
   1) Check that you meet all requirements
   2) Copy nvim folder in ~/.config/
-  3) Run nvim and let packages install (You'll get some errors, it's normal, some plugins are called but not yet installed)
-  4) Close and re-open nvim, everything should be ok
-  5) In vim type ":MasonInstall bash-language-server intelephense php-cs-fixer phpactor phpcs typescript-language-server"
-  6) Close and re-open nvim
-you should get something like this : 
+  3) Run nvim and let packages install.
+  4) Close and re-open nvim. You should see treesitter and Mason LSPs setup.
+  6) Close nvim.
+  
+You should then get something like this when opening a file with neovim : 
 
 ![Screenshot from 2023-01-06 10-19-21](https://user-images.githubusercontent.com/45790724/210970680-3e50afde-2a43-4bf4-ad54-22355fb543b4.png)
 
