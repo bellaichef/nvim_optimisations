@@ -43,7 +43,7 @@ Done !!
 ## Things you have to know (tips): 
   - PHP LSPs need to find .git (file or folder) in the file's folder your are editing or in one of its parents directory. For now I don't know how to avoid this behaviour. So I put a .git file in /var/tmp/ and I use 'sudoedit' or 'sudo -e' to edit my files.
   - If you want to set nvim as default system editor run this command : 'sudo update-alternatives --config editor', and choose nvim.
-  - in case of using TMUX run the following command on the host : export TERM=screen-256color to avoid a wrong colorscheme (optional)
+  - in case of using TMUX run the following command on the host : 'export TERM=screen-256color' to avoid a wrong colorscheme (optional)
 
 ## Below find the list of installed packages: 
 
