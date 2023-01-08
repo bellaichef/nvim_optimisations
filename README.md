@@ -3,13 +3,13 @@
 Optimized for Debian / Ubuntu (based on work of Chris Power : https://www.youtube.com/playlist?list=PLsz00TDipIffxsNXSkskknolKShdbcALR)
 
 Description : 
-These optimizations, will add features like autocompletion for BASH, PHP, JS and LUA files (more can be added), tree explorations, filesearch, occurence search over mutiple files etc. 
+These optimizations, will add features like autocompletion for BASH, PHP, JS and LUA files (more can be added), tree exploration, filesearch, occurence search over mutiple files (live grep) etc. 
 In the original configuration phpactor is used for PHP completion. I disabled it and enable intelephense instead which I feels more efficient. (May be because I don't know enough the product)
 
-I also kept the key bindings from Ganivok/Kickstart.nvim (https://github.com/Gavinok/Kickstart.nvim) 
+I also used some of the key bindings from Ganivok/Kickstart.nvim (https://github.com/Gavinok/Kickstart.nvim) 
 
 ## Client terminal requirement : 
-  - use of nerdfonts (optional but prettier : https://www.nerdfonts.com/font-downloads)
+  - Use of nerdfonts (optional but prettier : https://www.nerdfonts.com/font-downloads)
   
 ## Host requirement : 
   - Packages :
@@ -23,8 +23,8 @@ I also kept the key bindings from Ganivok/Kickstart.nvim (https://github.com/Gav
 ## Installation : 
 
  #### - Semi-Auto :
-   - Download install.sh into your home directory, and run the following command : 'chmod +x install.sh && ./install.sh'
-   - It's really not perfect but it save a little bit of time. Nvim will launch by itself, first time it'll installed required nvim plugins. Type [ENTER] and you'll see the plugins install.  Close nvim and then you'll see treesitter and Mason LSPs installation.
+   - Download install.sh into your home directory and run the following command : 'chmod +x install.sh && ./install.sh'
+   - It's really not perfect but it save a little bit of time. Nvim will launch by itself, first time it'll installed required nvim plugins. Once finished, close nvim and then you'll see treesitter and Mason LSPs setup.
   
  #### - Manual installation :
 
@@ -43,7 +43,6 @@ Done !!
 ## Things you have to know (tips): 
   - PHP LSPs need to find .git (file or folder) in the file's folder your are editing or in one of its parents directory. For now I don't know how to avoid this behaviour. So I put a .git file in /var/tmp/ and I use 'sudoedit' or 'sudo -e' to edit my files.
   - If you want to set nvim as default system editor run this command : 'sudo update-alternatives --config editor', and choose nvim.
-  - If you want to use this configuration with sudo, ensure that default editor for sudo is nvim and then use 'sudo -e' or 'sudoedit' command to edit your files.
   - in case of using TMUX run the following command on the host : export TERM=screen-256color to avoid a wrong colorscheme (optional)
 
 ## Below find the list of installed packages: 
