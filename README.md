@@ -6,7 +6,7 @@ Description :
 These optimizations, will add features like autocompletion for BASH, PHP, JS and LUA files (more can be added), tree exploration, filesearch, occurence search over mutiple files (live grep) etc. 
 In the original configuration phpactor is used for PHP completion. I disabled it and enable intelephense instead which I feels more efficient. (May be because I don't know enough the product)
 
-I also used some of the key bindings from Ganivok/Kickstart.nvim (https://github.com/Gavinok/Kickstart.nvim) 
+I also used some of the key bindings from  nvim-lua/kickstart.nvim (https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua) 
 
 ## Client terminal requirement : 
   - Use of nerdfonts (optional but prettier : https://www.nerdfonts.com/font-downloads)
