@@ -69,10 +69,7 @@ if [[ $runInstallation == "Y" || $runInstallation == "y" ]];then
 	nvim
   echo ""
   echo "---------------------------------------------------------------------------------------------------------
-Don't forget to launch nvim and type :
-  :MasonInstall bash-language-server intelephense php-cs-fixer phpactor phpcs typescript-language-server
-to enable completion for BASH, PHP 
-and typescript languages (JS etc.)
+Done !!!!
 ---------------------------------------------------------------------------------------------------------"
 
 else
