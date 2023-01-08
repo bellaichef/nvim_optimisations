@@ -14,10 +14,10 @@ I also used some of the key bindings from  nvim-lua/kickstart.nvim (https://gith
 ## Host requirement : 
   - Packages :
     - ripgrep
-    - Nvim >= 0.8
-    - NodeJS >= 18.x.x
-    - Npm
-    - PHP8.x
+    - Nvim >= 0.8 (https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable)
+    - NodeJS >= 18.x.x (https://joshtronic.com/2022/04/24/how-to-install-nodejs-18-on-ubuntu-2004-lts/)
+    - Npm (https://joshtronic.com/2022/04/24/how-to-install-nodejs-18-on-ubuntu-2004-lts/)
+    - PHP8.x (https://linuxize.com/post/how-to-install-php-8-on-ubuntu-20-04/)
     - Composer ( installation : https://getcomposer.org/download/)
   
 ## Installation : 
