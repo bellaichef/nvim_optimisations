@@ -23,8 +23,11 @@ I also used some of the key bindings from  nvim-lua/kickstart.nvim (https://gith
 ## Installation : 
 
  #### - Semi-Auto :
-   - Download install.sh into your home directory and run the following command : 'chmod +x install.sh && ./install.sh'
-   - It's really not perfect but it save a little bit of time. Nvim will launch by itself, first time it'll installed required nvim plugins. Once finished, close nvim and then you'll see treesitter and Mason LSPs setup.
+   - Run the following command : 
+   ```
+   cd && wget https://github.com/bellaichef/nvim_optimizations/raw/main/install.sh && chmod +x install.sh && ./install.sh
+   ```
+   - It's really not perfect but it save a little bit of time. Nvim will launch by itself, first time it'll installed required nvim plugins. Once finished, close nvim and then you'll see treesitter and Mason LSPs setup. Once this finished, everything is done.
   
  #### - Manual installation :
 
