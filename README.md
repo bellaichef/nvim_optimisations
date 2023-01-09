@@ -1,6 +1,6 @@
 # nvim optimizations
 
-Optimized for Debian / Ubuntu (based on work of Chris Power : https://www.youtube.com/playlist?list=PLsz00TDipIffxsNXSkskknolKShdbcALR)
+Optimized for Debian >= 10 / Ubuntu >= 20.04 (based on work of Chris Power : https://www.youtube.com/playlist?list=PLsz00TDipIffxsNXSkskknolKShdbcALR)
 
 Description : 
 These optimizations, will add features like autocompletion for BASH, PHP, JS and LUA files (more can be added), tree exploration, filesearch, occurence search over mutiple files (live grep) etc. 
