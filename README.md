@@ -1,6 +1,6 @@
 # nvim optimizations
 
-Optimized for Debian >= 10 / Ubuntu >= 20.04 (based on work of Chris Power : https://www.youtube.com/playlist?list=PLsz00TDipIffxsNXSkskknolKShdbcALR)
+Optimized for Debian >= 10 / Ubuntu >= 20.04 (based on work of TJDevries : https://www.youtube.com/watch?v=stqUbv-5u2s and Chris Power : https://www.youtube.com/playlist?list=PLsz00TDipIffxsNXSkskknolKShdbcALR)
 
 Description : 
 These optimizations, will add features like autocompletion for BASH, PHP, JS and LUA files (more can be added), tree exploration, filesearch, occurence search over mutiple files (live grep) etc. 
@@ -63,6 +63,6 @@ Done !!
 - nvim-lua/plenary (https://github.com/nvim-lua/plenary.nvim)
 - nvim-ripgrep (https://github.com/rinx/nvim-ripgrep)
 
-I advise you to check the 3 videos of Chris Power that'll show you how these modifications enhance your nvim. (Start of readme)
+I advise you to check the videos of TJDevries and Chris Power that'll show you how these modifications enhance your nvim. (Start of readme)
 
 Bye !
