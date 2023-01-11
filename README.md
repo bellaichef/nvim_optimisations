@@ -13,6 +13,7 @@ I also used some of the key bindings from  nvim-lua/kickstart.nvim (https://gith
   
 ## Host requirement : 
   - Packages :
+    - g++
     - ripgrep (https://github.com/BurntSushi/ripgrep)
     - Nvim >= 0.8 (https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable)
     - NodeJS >= 18.x.x (https://joshtronic.com/2022/04/24/how-to-install-nodejs-18-on-ubuntu-2004-lts/)
