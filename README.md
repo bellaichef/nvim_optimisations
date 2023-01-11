@@ -16,7 +16,9 @@ I also used some of the key bindings from  nvim-lua/kickstart.nvim (https://gith
     - g++
     - ripgrep (https://github.com/BurntSushi/ripgrep)
     - Nvim >= 0.8 (https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable)
-    - NodeJS >= 16.x.x (Node 16 : https://joshtronic.com/2021/05/09/how-to-install-nodejs-16-on-ubuntu-2004-lts/, Node 18 : https://joshtronic.com/2022/04/24/how-to-install-nodejs-18-on-ubuntu-2004-lts/ )
+    - NodeJS >= 16.x.x for Ubuntu 18.04 (Node 16 : https://joshtronic.com/2021/05/09/how-to-install-nodejs-16-on-ubuntu-2004-lts/)
+       - OR
+    - NodeJS >= 18.x.x for Ubuntu 20.04 and above(Node 18 : https://joshtronic.com/2022/04/24/how-to-install-nodejs-18-on-ubuntu-2004-lts/)
     - Npm (https://joshtronic.com/2022/04/24/how-to-install-nodejs-18-on-ubuntu-2004-lts/)
     - PHP8.x (https://linuxize.com/post/how-to-install-php-8-on-ubuntu-20-04/)
     - Composer ( installation : https://getcomposer.org/download/)
