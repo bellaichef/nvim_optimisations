@@ -5,8 +5,15 @@ IFS=$'\n'
 
 requirements="OK"
 
+if [[ ! -f "/usr/bin/g++" ]];then
+	requirements_status="/!\\ \033[1mg++ missing\033[0m (run sudo apt install g++)"
+	requirements="KO"
+else
+	requirements_status="g++ OK"
+fi
+
 if [[ ! -f "/usr/bin/rg" ]];then
-	requirements_status="/!\\ \033[1mripgrep missing\033[0m (https://github.com/BurntSushi/ripgrep/releases)"
+	requirements_status="$requirements_status\n/!\\ \033[1mripgrep missing\033[0m (https://github.com/BurntSushi/ripgrep/releases)"
 	requirements="KO"
 else
 	requirements_status="ripgrep OK"
