@@ -19,7 +19,7 @@ else
 	requirements_status="$requirements_status\nNeoVim OK"
 fi
 
-if [[ $(node -v 2>&1 | cut -d'.' -f1 | tail -c 3) -lt 18 || ! -f "/usr/bin/node" ]];then
+if [[ $(node -v 2>&1 | cut -d'.' -f1 | tail -c 3) -lt 16 || ! -f "/usr/bin/node" ]];then
 	requirements_status="$requirements_status\n/!\\ \033[1mNode\033[0m wrong version or missing (https://joshtronic.com/2022/04/24/how-to-install-nodejs-18-on-ubuntu-2004-lts/)"
         requirements="KO"
 else
