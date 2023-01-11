@@ -27,8 +27,12 @@ else
 fi
 
 if [[ $(node -v 2>&1 | cut -d'.' -f1 | tail -c 3) -lt 16 || ! -f "/usr/bin/node" ]];then
-	requirements_status="$requirements_status\n/!\\ \033[1mNode\033[0m wrong version or missing (https://joshtronic.com/2022/04/24/how-to-install-nodejs-18-on-ubuntu-2004-lts/)"
-        requirements="KO"
+	if [[ $(cat /etc/issue | cut -d' ' -f2 | cut -d -f1) -lt 18 ]];then
+		requirements_status="$requirements_status\n/!\\ \033[1mNode\033[0m wrong version or missing (https://joshtronic.com/2021/05/09/how-to-install-nodejs-16-on-ubuntu-2004-lts/)"
+	else
+		requirements_status="$requirements_status\n/!\\ \033[1mNode\033[0m wrong version or missing (https://joshtronic.com/2022/04/24/how-to-install-nodejs-18-on-ubuntu-2004-lts/)"
+	fi
+	requirements="KO"
 else
         requirements_status="$requirements_status\nNode OK"
 fi
