@@ -3,7 +3,7 @@
 Optimized for Debian >= 10 / Ubuntu >= 18.04 (based on work of TJDevries : https://www.youtube.com/watch?v=stqUbv-5u2s and Chris Power : https://www.youtube.com/playlist?list=PLsz00TDipIffxsNXSkskknolKShdbcALR)
 
 Description : 
-These optimizations, will add features like autocompletion for BASH, PHP, JS and LUA files (more can be added), tree exploration, filesearch, occurence search over mutiple files (live grep) etc. 
+These optimizations, will add features like autocompletion for BASH, PHP, HTML, JS and LUA files (more can be added), tree exploration, filesearch, occurence search over mutiple files (live grep) etc. 
 In the original configuration phpactor is used for PHP completion. I disabled it and enable intelephense instead which I feels more efficient. (May be because I don't know enough the product)
 
 I also used some of the key bindings from  nvim-lua/kickstart.nvim (https://github.com/nvim-lua/kickstart.nvim/blob/master/init.lua) 
