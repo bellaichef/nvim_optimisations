@@ -13,7 +13,7 @@ I also used some of the key bindings from  nvim-lua/kickstart.nvim (https://gith
   
 ## Host requirement : 
   - Packages :
-    - git "run: sudo apt install git -y"
+    - git "run : sudo apt install git -y"
     - g++ "run : sudo apt install g++ -y)
     - ripgrep (https://github.com/BurntSushi/ripgrep)
     - Nvim >= 0.8 (https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable)
