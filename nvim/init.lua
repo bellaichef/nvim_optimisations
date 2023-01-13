@@ -17,7 +17,7 @@ if required_set then
   mason_folder = vim.fn.stdpath 'data' .. '/mason/packages/intelephense/package.json'
 
   if vim.fn.empty(vim.fn.glob(mason_folder)) > 0 then
-    vim.cmd('MasonInstall bash-language-server intelephense php-cs-fixer html phpactor phpcs typescript-language-server')
+    vim.cmd('MasonInstall bash-language-server intelephense php-cs-fixer html-lsp phpactor phpcs typescript-language-server')
   end
 
 else
