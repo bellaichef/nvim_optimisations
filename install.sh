@@ -5,14 +5,21 @@ IFS=$'\n'
 
 requirements="OK"
 
+##########################################
+#    Still working but in update work    #
+# should be finished in January the 15th # 
+##########################################
+
 if [[ ! -f "/usr/bin/g++" ]];then
-	requirements_status="/!\\ \033[1mg++ missing\033[0m (run sudo apt install g++)"
+	gInstall="sudo apt install g++" 
+	requirements_status="/!\\ \033[1mg++ missing\033[0m (run $gInstall)"
 	requirements="KO"
 else
 	requirements_status="g++ OK"
 fi
 
 if [[ ! -f "/usr/bin/rg" ]];then
+	rgInstall="wget https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb -P ./packages/ && sudo apt install ./packages/ripgrep_13.0.0_amd64.deb -y"
 	requirements_status="$requirements_status\n/!\\ \033[1mripgrep missing\033[0m (https://github.com/BurntSushi/ripgrep/releases)"
 	requirements="KO"
 else
@@ -20,28 +27,24 @@ else
 fi
 
 if [[ $(nvim -v 2>&1 | grep "NVIM v" | cut -d'.' -f 2) -lt 8 || ! -f "/usr/bin/nvim" ]];then
+	nvInstall="sudo add-apt-repository ppa:neovim-ppa/unstable && sudo apt update && sudo apt install neovim"
 	requirements_status="$requirements_status\n/!\\ \033[1mNeoVim\033[0m wrong version or missing (https://launchpad.net/~neovim-ppa/+archive/ubuntu/unstable)"
 	requirements="KO"
 else
 	requirements_status="$requirements_status\nNeoVim OK"
 fi
 
-if [[ $(node -v 2>&1 | cut -d'.' -f1 | tail -c 3) -lt 16 || ! -f "/usr/bin/node" ]];then
+if [[ $(node -v 2>&1 | cut -d'.' -f1 | tail -c 3) -lt 16 || ! -f "/usr/bin/node" || -f "/usr/bin/npm" ]];then
 	if [[ $(cat /etc/issue | cut -d' ' -f2 | cut -d -f1) -lt 18 ]];then
+		nodeInstall="curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt install nodejs -y"
 		requirements_status="$requirements_status\n/!\\ \033[1mNode\033[0m wrong version or missing (https://joshtronic.com/2021/05/09/how-to-install-nodejs-16-on-ubuntu-2004-lts/)"
 	else
-		requirements_status="$requirements_status\n/!\\ \033[1mNode\033[0m wrong version or missing (https://joshtronic.com/2022/04/24/how-to-install-nodejs-18-on-ubuntu-2004-lts/)"
+		nodeInstall="curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - && sudo apt install nodejs -y"
+		requirements_status="$requirements_status\n/!\\ \033[1mNode &/OR NPM\033[0m wrong version or missing (https://joshtronic.com/2022/04/24/how-to-install-nodejs-18-on-ubuntu-2004-lts/)"
 	fi
 	requirements="KO"
 else
-        requirements_status="$requirements_status\nNode OK"
-fi
-
-if [[ ! -f "/usr/bin/npm" ]];then
-	requirements_status="$requirements_status\n/!\\ \033[1mnpm\033[0m wrong version or missing (https://joshtronic.com/2022/04/24/how-to-install-nodejs-18-on-ubuntu-2004-lts/)"
-        requirements="KO"
-else
-        requirements_status="$requirements_status\nnpm OK"
+        requirements_status="$requirements_status\nNode & npm OK"
 fi
 
 if [[ $(php -v 2>&1 | head -n 1 | cut -d' ' -f2 | cut -d'.' -f1) -lt 8 || ! -f "/usr/bin/php" ]];then
