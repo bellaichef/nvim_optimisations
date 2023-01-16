@@ -147,7 +147,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 	fi
 
 	if [[ $nvInstall != "" ]];then
-		echo "Do you want to install or upgrade NeoVim [(Y)/n ?"
+		echo "Do you want to install or upgrade NeoVim [(Y)/n] ?"
 		launchNeoVimInstall="Y"
 		read -r launchNeoVimInstall
 		if [[ $launchNeoVimInstall == "Y" || $launchNeoVimInstall == "y" ]];then
@@ -157,7 +157,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		fi
 	fi
 
-	if [[ -z "$nodeInstall" ]];then
+	if [[ $nodeInstall != "" ]];then
 		echo "Do you want to install or upgrade NodeJS [(Y)/n] ?"
 		launchNodeInstall="Y"
 		read -r launchNodeInstall
