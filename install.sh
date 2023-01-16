@@ -152,6 +152,8 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		read -r launchNeoVimInstall
 		if [[ $launchNeoVimInstall == "Y" || $launchNeoVimInstall == "y" ]];then
 			eval $nvInstall
+		else
+			echo "NeoVim Installation cancelled"
 		fi
 	fi
 
