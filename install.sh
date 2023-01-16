@@ -142,7 +142,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		fi
 	fi
 
-	if [[ $nodeInstall != "" ]];then
+	if [[ -z "$nodeInstall" ]];then
 		echo "Do you want to install or upgrade NodeJS [(Y)/n] ?"
 		launchNodeInstall="Y"
 		read -r launchNodeInstall
@@ -151,7 +151,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		fi
 	fi
 
-	if [[ ]];then
+	if [[ -z "$composerInstall" ]];then
 		echo "Do you want to install or upgrade Composer [(Y)/n] ?"
 		launchCompInstall="Y"
 		read -r launchCompInstall
