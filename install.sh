@@ -12,7 +12,8 @@ productsArLength=${#productName[@]}
 
 ##########################################
 #    Still working but in update work    #
-# should be finished in January the 15th # 
+# should be finished in January the 15th #
+#              Or may be later ;-)       #
 ##########################################
 
 if [[ ! -f "/usr/bin/g++" ]];then
