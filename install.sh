@@ -5,17 +5,30 @@ IFS=$'\n'
 
 requirements="OK"
 
+productName=("g++" "GIT" "ripgrep" "NeoVim" "NodeJS" "Composer")
+productInstall=("\$gInstall" "\$gitInstall" "\$rgInstall" "\$nvInstall" "\$nodeInstall" "\$composerInstall")
+productsArLength=${#productName[@]}
+
+
 ##########################################
 #    Still working but in update work    #
 # should be finished in January the 15th # 
 ##########################################
 
 if [[ ! -f "/usr/bin/g++" ]];then
-	gInstall="sudo apt install g++" 
+	gInstall="sudo apt install g++ -y" 
 	requirements_status="/!\\ \033[1mg++ missing\033[0m (run $gInstall)"
 	requirements="KO"
 else
 	requirements_status="g++ OK"
+fi
+
+if [[ ! -f "/usr/bin/git" ]];then
+	gitInstall="sudo apt install git -y"
+	requirements_status="$requirements_status\n/!\\ \033[1mripgrep missing\033[0m (https://github.com/BurntSushi/ripgrep/releases)"
+	requirements="KO"
+else
+	requirements_status="GIT OK"
 fi
 
 if [[ ! -f "/usr/bin/rg" ]];then
@@ -55,6 +68,7 @@ else
 fi
 
 if [[ ! -f "/usr/bin/composer" ]];then
+	composerInstall="php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\" && php -r \"if (hash_file('sha384', 'composer-setup.php') === '55ce33d7678c5a611085589f1f3ddf8b3c52d662cd01d4ba75c0ee0459970c2200a51f492d557530c71c15d8dba01eae') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;\" && php composer-setup.php && php -r \"unlink('composer-setup.php');\" && mv composer.phar /usr/bin/composer"
 	requirements_status="$requirements_status\n/!\\ \033[1mcomposer\033[0m wrong version or missing (https://getcomposer.org/download/)"
         requirements="KO"
 else
@@ -67,7 +81,7 @@ if [[ $requirements == "OK" ]];then
 	echo -n "You are meeting the minimum requirements, Do you want to go on the the intallation ?  [(Y)/n]"
 	read -r runInstallation
 else
-	echo -e "/!\\ You are \033[1mNOT\033[0m meeting the minimum requirements, Do you want to go on with nvim_optimizationsthe the intallation anyway?  [(Y)/n]"
+	echo -e "/!\\ You are \033[1mNOT\033[0m meeting the minimum requirements, Do you want to go on with nvim_optimizations the the intallation anyway [y/(N)]? or Do you want get help with installation of missing elements [i,(N)]?" 
 	read -r runInstallation
 fi
 
@@ -85,6 +99,66 @@ if [[ $runInstallation == "Y" || $runInstallation == "y" ]];then
   echo "---------------------------------------------------------------------------------------------------------
 Done !!!!
 ---------------------------------------------------------------------------------------------------------"
+
+elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
+
+###
+# Part to be changed  
+###
+
+	if [[ $gInsatll != "" ]];then
+		echo "Do you want to install or upgrade g++ [(Y)/n] ?"
+		launchgplusplusInstall="Y"
+		read -r launchgplusplusInstall
+		if [[ $launchgplusplusInstall == "Y" || $launchgplusplusInstall == "y" ]]; then
+			eval $gInsatll
+		fi
+	fi
+
+	if [[ $gitInstall != "" ]];then
+		echo "Do you want to install or upgrade GIT [(Y)/n] ?"
+		launchGITInstall="Y"
+		read -r launchGITInstall
+		if [[ $launchGITInstall == "Y" || $launchGITInstall == "y" ]]; then
+			eval $gitInstall
+		fi
+	fi
+
+	if [[ $rgInstall != "" ]];then
+		echo "Do you want to install or upgrade RipGrep [(Y)/n] ?"
+		launchRGInstall="Y"
+		read -r launchRGInstall
+		if [[ $launchRGInstall == "Y" || $launchRGInstall == "y" ]]; then
+			eval $rgInstall
+		fi
+	fi
+
+	if [[ $nvInstall != "" ]];then
+		echo "Do you want to install or upgrade NeoVim [(Y)/n ?"
+		launchNeoVimInstall="Y"
+		read -r launchNeoVimInstall
+		if [[ $launchNeoVimInstall == "Y" || $launchNeoVimInstall == "y" ]]; then
+			eval $nvInstall
+		fi
+	fi
+
+	if [[ $nodeInstall != "" ]];then
+		echo "Do you want to install or upgrade NodeJS [(Y)/n] ?"
+		launchNodeInstall="Y"
+		read -r launchNodeInstall
+		if [[ $launchNodeInstall == "Y" || $launchNodeInstall == "y" ]]; then
+			eval $nodeInstall
+		fi
+	fi
+
+	if [[ ]];then
+		echo "Do you want to install or upgrade Composer [(Y)/n] ?"
+		launchCompInstall="Y"
+		read -r launchCompInstall
+		if [[ $launchCompInstall == "Y" || $launchNeoVimInstall == "y" ]]; then
+			eval $composerInstall
+		fi
+	fi
 
 else
 	echo "You answered with n/N or any other chars than Y/y, we consider this as a N. ;-) !"
