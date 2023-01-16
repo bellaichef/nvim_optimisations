@@ -170,7 +170,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		echo "Do you want to install or upgrade Composer [(Y)/n] ?"
 		launchCompInstall="Y"
 		read -r launchCompInstall
-		if [[ $launchCompInstall == "Y" || $launchNeoVimInstall == "y" ]];then
+		if [[ $launchCompInstall == "Y" || $launchCompInstall == "y" ]];then
 			eval $composerInstall
 		fi
 	fi
