@@ -3,7 +3,7 @@
 IFS_ORI=$IFS
 IFS=$'\n'
 
-If [[ $(cat /etc/issue | cut -d' ' -f2 | cut -d'.' -f1 | head -n 1) -lt 18 ]];then
+if [[ $(cat /etc/issue | cut -d' ' -f2 | cut -d'.' -f1 | head -n 1) -lt 18 ]];then
 	echo "This installation package works for Debian >= 10 and Ubuntu >= 18.04"
 	exit
 fi
