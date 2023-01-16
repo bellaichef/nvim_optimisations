@@ -60,7 +60,7 @@ else
 	requirements_status="$requirements_status\nNeoVim OK"
 fi
 
-if [[ $(node -v 2>&1 | cut -d'.' -f1 | tail -c 3) -lt 16 || ! -f "/usr/bin/node" || -f "/usr/bin/npm" ]];then
+if [[ $(node -v 2>&1 | cut -d'.' -f1 | tail -c 3) -lt 16 || ! -f "/usr/bin/node" || ! -f "/usr/bin/npm" ]];then
 	if [[ $(cat /etc/issue | cut -d' ' -f2 | cut -d'.' -f1 | head -n 1) -lt 18 ]];then
 		nodeInstall="curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - && sudo apt install nodejs -y"
 		requirements_status="$requirements_status\n/!\\ \033[1mNode\033[0m wrong version or missing (https://joshtronic.com/2021/05/09/how-to-install-nodejs-16-on-ubuntu-2004-lts/)"
