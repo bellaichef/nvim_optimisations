@@ -166,7 +166,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		fi
 	fi
 
-	if [[ -z "$composerInstall" ]];then
+	if [[ $composerInstall != "" ]];then
 		echo "Do you want to install or upgrade Composer [(Y)/n] ?"
 		launchCompInstall="Y"
 		read -r launchCompInstall
