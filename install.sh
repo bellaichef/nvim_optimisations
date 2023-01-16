@@ -3,7 +3,7 @@
 IFS_ORI=$IFS
 IFS=$'\n'
 
-If [[ $(cat /etc/issue | cut -d' ' -f2 | cut -d'.' -f1 | head -n 1) -lt 18 ]]; then
+If [[ $(cat /etc/issue | cut -d' ' -f2 | cut -d'.' -f1 | head -n 1) -lt 18 ]];then
 	echo "This installation package works for Debian >= 10 and Ubuntu >= 18.04"
 	exit
 fi
@@ -116,7 +116,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		echo "Do you want to install or upgrade g++ [(Y)/n] ?"
 		launchgplusplusInstall="Y"
 		read -r launchgplusplusInstall
-		if [[ $launchgplusplusInstall == "Y" || $launchgplusplusInstall == "y" ]]; then
+		if [[ $launchgplusplusInstall == "Y" || $launchgplusplusInstall == "y" ]];then
 			eval $gInsatll
 		fi
 	fi
@@ -125,7 +125,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		echo "Do you want to install or upgrade GIT [(Y)/n] ?"
 		launchGITInstall="Y"
 		read -r launchGITInstall
-		if [[ $launchGITInstall == "Y" || $launchGITInstall == "y" ]]; then
+		if [[ $launchGITInstall == "Y" || $launchGITInstall == "y" ]];then
 			eval $gitInstall
 		fi
 	fi
@@ -134,7 +134,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		echo "Do you want to install or upgrade RipGrep [(Y)/n] ?"
 		launchRGInstall="Y"
 		read -r launchRGInstall
-		if [[ $launchRGInstall == "Y" || $launchRGInstall == "y" ]]; then
+		if [[ $launchRGInstall == "Y" || $launchRGInstall == "y" ]];then
 			eval $rgInstall
 		fi
 	fi
@@ -143,7 +143,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		echo "Do you want to install or upgrade NeoVim [(Y)/n ?"
 		launchNeoVimInstall="Y"
 		read -r launchNeoVimInstall
-		if [[ $launchNeoVimInstall == "Y" || $launchNeoVimInstall == "y" ]]; then
+		if [[ $launchNeoVimInstall == "Y" || $launchNeoVimInstall == "y" ]];then
 			eval $nvInstall
 		fi
 	fi
@@ -152,7 +152,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		echo "Do you want to install or upgrade NodeJS [(Y)/n] ?"
 		launchNodeInstall="Y"
 		read -r launchNodeInstall
-		if [[ $launchNodeInstall == "Y" || $launchNodeInstall == "y" ]]; then
+		if [[ $launchNodeInstall == "Y" || $launchNodeInstall == "y" ]];then
 			eval $nodeInstall
 		fi
 	fi
@@ -161,7 +161,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		echo "Do you want to install or upgrade Composer [(Y)/n] ?"
 		launchCompInstall="Y"
 		read -r launchCompInstall
-		if [[ $launchCompInstall == "Y" || $launchNeoVimInstall == "y" ]]; then
+		if [[ $launchCompInstall == "Y" || $launchNeoVimInstall == "y" ]];then
 			eval $composerInstall
 		fi
 	fi
