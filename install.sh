@@ -123,6 +123,7 @@ elif [[ $runInstallation == "I" || $runInstallation == "i" ]];then
 		echo "Do you want to install or upgrade g++ [(Y)/n] ?"
 		launchgplusplusInstall="Y"
 		read -r launchgplusplusInstall
+		launchgplusplusInstall=${launchgplusplusInstall:-Y}
 		if [[ $launchgplusplusInstall == "Y" || $launchgplusplusInstall == "y" ]];then
 			eval $gInsatll
 		fi
