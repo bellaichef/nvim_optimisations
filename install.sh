@@ -38,10 +38,10 @@ fi
 
 if [[ ! -f "/usr/bin/git" ]];then
 	gitInstall="sudo apt install git -y"
-	requirements_status="$requirements_status\n/!\\ \033[1mripgrep missing\033[0m (https://github.com/BurntSushi/ripgrep/releases)"
+	requirements_status="$requirements_status\n/!\\ \033[1mGIT missing\033[0m (https://github.com/BurntSushi/ripgrep/releases)"
 	requirements="KO"
 else
-	requirements_status="GIT OK"
+	requirements_status="$requirements_status\nGIT OK"
 fi
 
 if [[ ! -f "/usr/bin/rg" ]];then
@@ -49,7 +49,7 @@ if [[ ! -f "/usr/bin/rg" ]];then
 	requirements_status="$requirements_status\n/!\\ \033[1mripgrep missing\033[0m (https://github.com/BurntSushi/ripgrep/releases)"
 	requirements="KO"
 else
-	requirements_status="ripgrep OK"
+	requirements_status="$requirements_status\nripgrep OK"
 fi
 
 if [[ $(nvim -v 2>&1 | grep "NVIM v" | cut -d'.' -f 2) -lt 8 || ! -f "/usr/bin/nvim" ]];then
